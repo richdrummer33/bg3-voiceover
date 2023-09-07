@@ -1,0 +1,85 @@
+The core classes, functions, and methods necessary for this project are:
+
+1. `ScreenReader`: This class will use the pytesseract library to perform OCR on the screen in real-time.
+2. `DialogueHistory`: This class will manage the history of dialogues, storing up to 500 characters of past dialogue.
+3. `AICommentator`: This class will use the OpenAI GPT-3 model to generate commentary based on the current dialogue and dialogue history.
+4. `main`: This function will be the entry point of the application, orchestrating the other components.
+
+Now, let's write the code for each of these components.
+
+requirements.txt
+```txt
+pytesseract==0.3.8
+openai==0.27.0
+Pillow==8.3.2
+```
+
+screen_reader.py
+```python
+import pytesseract
+from PIL import ImageGrab
+
+class ScreenReader:
+    def __init__(self):
+        self.pytesseract = pytesseract
+
+    def read_screen(self):
+        screenshot = ImageGrab.grab()
+        text = self.pytesseract.image_to_string(screenshot)
+        return text
+```
+
+dialogue_history.py
+```python
+class DialogueHistory:
+    def __init__(self):
+        self.history = ""
+
+    def add_dialogue(self, dialogue):
+        self.history += dialogue
+        if len(self.history) > 500:
+            self.history = self.history[-500:]
+
+    def get_history(self):
+        return self.history
+```
+
+ai_commentator.py
+```python
+import openai
+
+class AICommentator:
+    def __init__(self):
+        self.openai = openai
+
+    def generate_commentary(self, dialogue, history):
+        prompt = history + dialogue
+        response = self.openai.Completion.create(engine="text-davinci-002", prompt=prompt, max_tokens=100)
+        return response.choices[0].text.strip()
+```
+
+main.py
+```python
+from screen_reader import ScreenReader
+from dialogue_history import DialogueHistory
+from ai_commentator import AICommentator
+import time
+
+def main():
+    screen_reader = ScreenReader()
+    dialogue_history = DialogueHistory()
+    ai_commentator = AICommentator()
+
+    while True:
+        dialogue = screen_reader.read_screen()
+        dialogue_history.add_dialogue(dialogue)
+        history = dialogue_history.get_history()
+        commentary = ai_commentator.generate_commentary(dialogue, history)
+        print(commentary)
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
+```
+
+This code should be fully functional, assuming that the pytesseract library is correctly set up and that the OpenAI API key is correctly set in the environment variables. The application will continuously read the screen, add the read text to the dialogue history, generate commentary based on the current dialogue and dialogue history, and print the commentary to the console. It will then wait for one second before repeating the process.
