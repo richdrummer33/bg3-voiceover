@@ -9,11 +9,15 @@ Click the image to view **outtakes from my Baldur's Gate 3 playthrough**.
 ## Features :sparkles:
   - Uses OCR to read in-game text.
   - Queries text through OpenAI's ChatGPT API (via langchain).
-  - Generates and plays voiceover dialogues via Eleven Labs.
+  - Generates and plays voiceover dialogues via Eleven Labs - aka *the main character's "thoughts"*.
 
 ## Requirements :gear:
   - A paid [OpenAI account](https://tinyurl.com/euxs2xvw). Pay-per-use and quite cost-effective with GPT 3.5 turbo.
   - A paid [Eleven Labs subscription](https://elevenlabs.io/speech-synthesis). The basic plan starts at $5/month.
+
+## Eleven Labs Voices
+  - You will need to create a voice [here](https://elevenlabs.io/speech-synthesis) and name it whatever you like. Set that name in eleven_labs.py.
+  - [Here](https://drive.google.com/file/d/1EkhfnwoT35_5EXy6-qTIZ5GesXWiber6/view?usp=sharing) is an mp3 of the dark urge that works great.
 
 ## Notes :memo:
   - Utilizes Langchain for "conversational memory."
