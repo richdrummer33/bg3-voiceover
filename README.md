@@ -1,10 +1,10 @@
 # bg3-voiceover
 Whisper Labs + ChatGPT voiceover with OCR for games like Baldur's Gate 3. [Here's some outtakes in my Baldur's Gate 3 playthrough](https://youtu.be/bOrfytcX8mM?si=Z8GBHDHv-Qobd8Va)
 
-This tool uses OCR to read text on the screen, then queries it through OpenAI's ChatGPT API to check its meaningfulness. If yes, it generates dialogue via GPT and plays it as voiceover, using Eleven Labs with a specified voice.
+This tool uses OCR to read text on the screen, then queries it through OpenAI's ChatGPT API (via langchain) to check its meaningfulness. If yes, it generates dialogue via GPT and plays it as voiceover, using Eleven Labs with a specified voice.
 
 Notes: 
-  - You need an [OpenAI account](https://tinyurl.com/euxs2xvw) with billing set up (pay-per-use).
+  - Using Langchain for "conversational memory".
   - You'll also need a paid [Eleven Labs subscription](https://elevenlabs.io/speech-synthesis). Basic plan is 5 USD/month.
   - I'm using this [Eleven Labs API](https://github.com/lugia19/elevenlabslib)
   - Latency 
