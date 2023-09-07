@@ -15,9 +15,9 @@ Click the image to view **outtakes from my Baldur's Gate 3 playthrough**.
   - A paid [OpenAI account](https://tinyurl.com/euxs2xvw). Pay-per-use and quite cost-effective with GPT 3.5 turbo.
   - A paid [Eleven Labs subscription](https://elevenlabs.io). The basic plan starts at $5/month.
 
-## Eleven Labs Voices
+## Eleven Labs Voices 🗣️
   - You will need to create a voice [here](https://elevenlabs.io/speech-synthesis) and name it whatever you like.
-  - Upload an audio sample. E.g. An Origin character's intro speech.
+  - Upload an audio sample 🔊. E.g. An Origin character's intro speech.
   - In eleven_labs.py, set elevenLabsVoice to match the name of the voice you created in Eleven Labs.
   - [Here](https://drive.google.com/file/d/1EkhfnwoT35_5EXy6-qTIZ5GesXWiber6/view?usp=sharing) is an mp3 of the dark urge that works great.
 
