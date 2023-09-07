@@ -17,7 +17,7 @@ Click the image to view **outtakes from my Baldur's Gate 3 playthrough**.
 
 ## Eleven Labs Voices
   - You will need to create a voice [here](https://elevenlabs.io/speech-synthesis) and name it whatever you like.
-  - Upload an audio sample. E.g. Record the Origin character's intro speech.
+  - Upload an audio sample. E.g. An Origin character's intro speech.
   - In eleven_labs.py, set elevenLabsVoice to match the name of the voice you created in Eleven Labs.
   - [Here](https://drive.google.com/file/d/1EkhfnwoT35_5EXy6-qTIZ5GesXWiber6/view?usp=sharing) is an mp3 of the dark urge that works great.
 
