@@ -7,6 +7,7 @@ This tool uses OCR to read text on the screen, then queries it through OpenAI's 
 
 Notes: 
   - Using Langchain for "conversational memory".
+  - You'll need a paid [OpenAI account](https://tinyurl.com/euxs2xvw). It is pay-per use (quite cheap with GPT 3.5 turbo).
   - You'll also need a paid [Eleven Labs subscription](https://elevenlabs.io/speech-synthesis). Basic plan is 5 USD/month.
   - I'm using this [Eleven Labs API](https://github.com/lugia19/elevenlabslib)
   - Latency 
