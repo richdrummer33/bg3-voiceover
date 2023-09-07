@@ -7,6 +7,10 @@ _bio = "A character from baldur's gate who embodies a struggle with violent desi
    #+ "If you are being spoken to derogatorily, roast that mofo and include some modern slang."
 class CheckText:
     
+    #                   Say 'YES' if:
+    #                   - The text *contains* complete sentence(s).
+    #                   - It's a description of a spell, item, or ability.
+
     def check_text(self, text):
         parameters = {
             'model': 'gpt-4', # 'gpt-4'
@@ -16,12 +20,9 @@ class CheckText:
                     "role": "system", "content":
                     """I'm playing Baldur's Gate and I need you to help filter the in-game text. You need to determine if the OCR-converted text from a screenshot is meaningful to the story or gameplay.
 
-                    Say 'YES' if:
-                        - The text *contains* complete sentence(s).
-                        - It's a description of a spell, item, or ability.
+                    Say 'YES' if: The text is character/npc dialogue, a gameplay tip, or a description of the world.
                     
-                    Say 'NO' if:
-                        - It's a jumbled mix of UI elements, icons, or non-contextual numbers and symbols and does not contain a complete sentence.
+                    Say 'NO' if: Anything else
                     
                     Special Case:
                         - If the text contains an enemy's name, feel free to say 'YES'.
