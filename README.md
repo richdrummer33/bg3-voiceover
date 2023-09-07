@@ -16,7 +16,9 @@ Click the image to view **outtakes from my Baldur's Gate 3 playthrough**.
   - A paid [Eleven Labs subscription](https://elevenlabs.io/speech-synthesis). The basic plan starts at $5/month.
 
 ## Eleven Labs Voices
-  - You will need to create a voice [here](https://elevenlabs.io/speech-synthesis) and name it whatever you like. Set that name in eleven_labs.py.
+  - You will need to create a voice [here](https://elevenlabs.io/speech-synthesis) and name it whatever you like.
+  - Upload an audio sample. E.g. Record the Origin character's intro speech.
+  - In eleven_labs.py, set elevenLabsVoice to match the name of the voice you created in Eleven Labs.
   - [Here](https://drive.google.com/file/d/1EkhfnwoT35_5EXy6-qTIZ5GesXWiber6/view?usp=sharing) is an mp3 of the dark urge that works great.
 
 ## Notes :memo:
