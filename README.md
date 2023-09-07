@@ -20,7 +20,7 @@ Click the image to view **outtakes from my Baldur's Gate 3 playthrough**.
   - Utilizes [Eleven Labs API Library](https://github.com/lugia19/elevenlabslib) for voice synthesis.
 
 ### Latency :hourglass:
-  - Latency is on the higher side.
+  - Latency is rather high.
+  - Less words = lower latency. Tweaking the prompt and max tokens can help.
   - Some mitigation is possible by using GPT 3.5-turbo instead of GPT-4.
   - The main bottleneck is with Eleven Labs; further optimizations may be possible.
-
